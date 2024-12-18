@@ -1,6 +1,6 @@
 <?php
 
-$conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "root");
+$conn = new PDO("mysql:dbname=bd_php;host=localhost", "root", "");
 
 $conn->beginTransaction();
 

@@ -1,6 +1,6 @@
 <?php
 
-function __autoload(function($nomeClasse){
+function _autoload(function ($nomeClasse){
 
 	// var_dump($nomeClasse);
 	require_once("$nomeClasse.php");
