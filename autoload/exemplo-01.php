@@ -1,11 +1,11 @@
 <?php
 
-function _autoload(function ($nomeClasse){
+spl_autoload_register(function ($nomeClasse) {
 
 	// var_dump($nomeClasse);
-	require_once("$nomeClasse.php");
+		require_once("$nomeClasse.php");
+	});
 
-});
 
 $carro = new DelRey();
 
