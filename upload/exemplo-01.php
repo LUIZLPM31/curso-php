@@ -2,9 +2,23 @@
 
 	<input type="file" name="fileUpload">
 
-	<button type="submit">Send</button>
+	<button type="submit">Enviar</button>
 	
 </form>
+<style>
+	button {
+		color: #398;
+		background-color: red;
+		
+	}
+	button:hover{
+		cursor: pointer;
+		background-color: black;
+	}
+	form{
+		background-color: red;
+	}
+</style>
 
 <?php
 
