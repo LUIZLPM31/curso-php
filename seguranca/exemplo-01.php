@@ -19,6 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <form method="post">
 	
 	<input type="text" name="cmd">
-	<button type="submit">Enviar</button>
+	<button style="background-color:#ff3" type="submit">Enviar</button>
 
 </form>

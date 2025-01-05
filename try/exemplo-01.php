@@ -13,6 +13,6 @@ try {
 		"code"=>$e->getCode()
 	));
 
-}
+} 
 
 ?>

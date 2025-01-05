@@ -1,11 +1,11 @@
 {
     "name": "hcodebr/composer",
-    "description": "Aula de PHP 7",
+    "description": "Aula de PHP ",
     "type": "project",
     "authors": [
         {
-            "name": "João Rangel",
-            "email": "joaohcrangel@gmail.com"
+            "name": "Luiz Paulo",
+            "email": "luizpaulomouran@gmail.com"
         }
     ],
     "minimum-stability": "dev",

@@ -30,7 +30,7 @@ $mail->SMTPDebug = 2;
 $mail->Debugoutput = 'html';
 
 //Set the hostname of the mail server
-$mail->Host = 'smtp-mail.outlook.com';
+$mail->Host = 'smtp.gmail.com';
 // use
 // $mail->Host = gethostbyname('smtp.gmail.com');
 // if your network does not support SMTP over IPv6
@@ -45,19 +45,19 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = "";
+$mail->Username = "luizpaulomouran@gmail.com";
 
 //Password to use for SMTP authentication
 $mail->Password = "";
 
 //Set who the message is to be sent from
-$mail->SetFrom('', 'Curso PHP 7');
+$mail->SetFrom('luizpaulomouran@gmail.com', 'Curso PHP ');
 
 //Set an alternative reply-to address
 // $mail->addReplyTo('', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('', 'Suporte Hcode');
+$mail->addAddress('luizpaulomouran@gmail.com', 'Suporte Hcode kkkkkk');
 
 //Set the subject line
 $mail->Subject = 'Testando a classe PHPMailer com Gmail';

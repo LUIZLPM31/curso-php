@@ -1,6 +1,6 @@
 <?php
 
-$cep = "01310100";
+$cep = "91750060";
 $link = "https://viacep.com.br/ws/$cep/json/";
 
 $ch = curl_init($link);

@@ -14,7 +14,7 @@ function trataNome($name) {
 
 try {
 	
-	trataNome("João");
+	trataNome("Luiz");
 	trataNome("");
 
 } catch (Exception $e) {
@@ -23,7 +23,7 @@ try {
 
 } finally {
 
-	echo "Executou o Try!";
+	echo "Executou o Try!!!!!";
 
 }
 
