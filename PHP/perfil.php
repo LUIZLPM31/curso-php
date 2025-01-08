@@ -13,9 +13,8 @@
     <h1>CineLoca</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="perfil.html">Perfil</a></li>
-        <li><a href="favoritos.html">Favoritos</a></li>
+        <li><a href="principal.php">Home</a></li>
+        <li><a href="perfil.php">Perfil</a></li>
       </ul>
     </nav>
   </header>
@@ -73,8 +72,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 50vh; 
   flex-direction: column; 
+  size-adjust: auto;
 }
 
 

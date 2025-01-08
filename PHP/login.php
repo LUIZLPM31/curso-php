@@ -13,7 +13,6 @@
             height: 100vh;
             margin: 0;
             background-image: url(https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg);
-            background-size: cover;
         }
         .login-container {
             background: #000000;
