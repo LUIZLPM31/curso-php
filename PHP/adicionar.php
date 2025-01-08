@@ -4,7 +4,8 @@ include_once 'includes/head.php';
  <title>Novo Cliente</title>
     <div class="row">
     <div class="col s12 m6 push-m3">
-       <a href="principal.php"><center><h3 class="">Novo Cliente</h3></center></a> 
+  <a href="principal.php"> <center> <img src="imagem-logo.jpg.jpeg" alt="Logo" class="logo"></center></a>
+       <center><h3 class="">Novo Cliente</h3></center>
            <form action="php_action/create.php" method="POST">
                 <div class="input-field col s12">
                     <input type="text" name="nome" id="nome">
@@ -35,9 +36,7 @@ include_once 'includes/head.php';
             
         }
         body {
-            background-image: url("https://wallpapers.com/images/hd/ahsoka-tano-3562-x-2003-0bnennbqv5oz03md.webp");
-            background-size: cover;
-            
+            background-color: #333133;
         }
         .row {
             margin-top: 20px;
@@ -46,7 +45,12 @@ include_once 'includes/head.php';
             background-color: #ca1b1b;
         }
         .btn:hover {
-            background-color: #9b3a3a;
+            background-color: rgb(228, 120, 120);;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
         }
     </style>
 

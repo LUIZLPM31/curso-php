@@ -26,13 +26,11 @@
     <div class="profile-info">
       <div class="profile-image">
         <img src="foto-perfil.jpg" alt="Foto do Usuário" id="profile-pic">
-        <button id="edit-photo-btn">Alterar Foto</button>
-      </div>
-      <div class="profile-details">
+            </div>
+            <div class="profile-details">
         <h3 id="profile-name">Nome do Usuário</h3>
         <p id="profile-email">Email: usuario@cineloca.com</p>
-        <p>Avaliações feitas: 5</p>
-      </div>
+       
     </div>
 
     <!-- Formulário de Edição (inicialmente escondido) -->
@@ -40,10 +38,10 @@
       <h3>Editar Perfil</h3>
       <form id="profile-edit-form">
         <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" value="Nome do Usuário" required><br><br>
+        <input type="text" id="name" name="name" value="" required><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="usuario@cineloca.com" required><br><br>
+        <input type="email" id="email" name="email" value="" required><br><br>
 
         <label for="photo">Foto de Perfil:</label>
         <input type="file" id="photo" name="photo" accept="image/*"><br><br>
@@ -60,7 +58,49 @@
     <p>&copy; 2024 CineLoca</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script >
+    document.getElementById('edit-profile-btn').addEventListener('click', function() {
+  
+  document.getElementById('edit-form').style.display = 'block';
+  document.getElementById('edit-profile-btn').style.display = 'none';  
+});
+
+document.getElementById('cancel-edit-btn').addEventListener('click', function() {
+  
+  document.getElementById('edit-form').style.display = 'none';
+  document.getElementById('edit-profile-btn').style.display = 'block';  
+});
+    
+document.getElementById('save-changes-btn').addEventListener('click', function() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const photo = document.getElementById('photo').files[0];  
+
+ 
+  document.getElementById('profile-name').textContent = name;
+  document.getElementById('profile-email').textContent = 'Email: ' + email;
+
+  
+  if (photo) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('profile-pic').src = e.target.result;
+    };
+    reader.readAsDataURL(photo);
+  }
+
+  
+  document.getElementById('edit-form').style.display = 'none';
+  document.getElementById('edit-profile-btn').style.display = 'block'; 
+});
+
+
+const Sequelize = require('sequelize')
+const sequelize = new Sequelize('crud', 'root', '', {
+  host: "localhost",
+  dialect: "mysql"
+});
+  </script>
 
   <style>
    body {
@@ -68,7 +108,7 @@
   font-family: Arial, sans-serif;
   background-color: #cc1515;
   margin: 0;
-  padding: 0;
+  padding: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,10 +119,10 @@
 
 
 header {
-  background-image: url("https://wallpapers.com/images/hd/ufo-pictures-1re5vol0pb5pmfch.webp");    
-  background-color: #0c0b0b;
+   
+  background-color: rgb(0, 1, 1, 0.5);
   color: #fff;
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
   margin-bottom: 30px;
   width: 100%;
@@ -92,11 +132,11 @@ header {
 
 .logo-container {
   text-align: center;
-  margin-top: 20px; 
+  margin-top: 10px; 
 }
 
 .logo {
-  max-width: 150px; 
+  max-width: 90px; 
   height: auto;
 }
 
@@ -169,6 +209,10 @@ section.user-profile {
 .profile-details h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #fff;
+}
+.profile-details{
+  color: #fff;
 }
 
 
@@ -224,10 +268,10 @@ button:hover {
 
 
 footer {
-  background-color: #0f0f0f;
+   background-color: rgb(0, 1, 1, 0.5);
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   position: relative;
   width: 100%;
   bottom: 0;
@@ -267,23 +311,6 @@ footer {
   cursor: pointer;
 }
 
-.movie-rating .star {
-  color: #ccc; 
-  transition: color 0.3s ease;
-}
-
-
-.movie-rating .star:hover,
-.movie-rating .star.hover {
-  color: #f39c12; 
-}
-
-
-.movie-rating .star.filled {
-  color: #f39c12; 
-}
-
-
 .movie-card:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -317,8 +344,10 @@ footer {
 } 
 h2 {
     color:#fff;
+    
 
 } 
+
   </style>
 </body>
 </html>

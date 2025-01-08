@@ -422,7 +422,58 @@ h2 {
 }
 
 
-        </style>
+ </style>
+ <script>
+            
+            const movieRatings = document.querySelectorAll('.movie-rating');
+
+
+            function handleStarClick(event) {
+            const rating = event.target.dataset.value;  
+            const stars = event.target.parentNode.children; 
+  
+ 
+            for (let i = 0; i < stars.length; i++) {
+            if (i < rating) {
+             stars[i].classList.add('filled');  
+           } else {
+              stars[i].classList.remove('filled');  
+             }
+           }
+
+              console.log(`Avaliação dada: ${rating} estrelas`);
+          }
+
+
+function handleStarHover(event) {
+  const rating = event.target.dataset.value;
+  const stars = event.target.parentNode.children;
+
+ 
+  for (let i = 0; i < stars.length; i++) {
+    if (i < rating) {
+      stars[i].classList.add('hover'); 
+    } else {
+      stars[i].classList.remove('hover');  
+    }
+  }
+}
+
+
+function handleStarLeave(event) {
+  const stars = event.target.parentNode.children;
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].classList.remove('hover');  
+  }
+}
+
+
+movieRatings.forEach(rating => {
+  rating.addEventListener('click', handleStarClick); 
+  rating.addEventListener('mouseover', handleStarHover);  
+  rating.addEventListener('mouseleave', handleStarLeave); 
+});
+        </script>
  
 </body>
 </html>

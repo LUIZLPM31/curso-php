@@ -8,6 +8,7 @@ if(isset($_GET['id'])):
     $dados = mysqli_fetch_array($resultado);
 endif;
 ?>
+     <a href="principal.php"> <center> <img src="imagem-logo.jpg.jpeg" alt="Logo" class="logo"></center></a>
     <div class="row">
     <div class="col s12 m6 push-m3">
        <center> <h3 class="">Editar Cliente</h3></center>
@@ -35,14 +36,21 @@ endif;
     </div>
      <style>
         body {
-            background-image: url("https://wallpapers.com/images/hd/ufo-pictures-1re5vol0pb5pmfch.webp");
-            background-size: cover;
+            background-color: #333133;
         }
         h3 {
             color: #fff;
         }
         .btn {
             background-color: #ca1b1b;
+        }
+        .btn:hover {
+            background-color:rgb(228, 120, 120);
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
         }
      </style>
 

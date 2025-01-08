@@ -3,7 +3,7 @@ include_once 'includes/mensage.php';
 include_once 'php_action/db_connect.php';
 include_once 'includes/head.php';
 ?>
- 
+   <a href="principal.php"> <center> <img src="imagem-logo.jpg.jpeg" alt="Logo" class="logo"></center></a>
     <div class="row">
     <div class="col s12 m6 push-m3">
         <center><h3 class="">Clientes</h3></center>
@@ -72,8 +72,7 @@ include_once 'includes/head.php';
             
         }
         body {
-            background-image: url("https://wallpapers.com/images/hd/ufo-pictures-1re5vol0pb5pmfch.webp");
-            background-size: cover;
+            background-color: #333133;
         }
         .row {
             margin-top: 20px;
@@ -82,7 +81,12 @@ include_once 'includes/head.php';
             background-color: #ca1b1b;
         }
         .btn:hover {
-            background-color: #9b3a3a;
+            background-color:rgb(228, 120, 120);;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
         }
     </style>
 
