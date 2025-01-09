@@ -16,7 +16,7 @@
             background-size: cover;
         }
         .login-container {
-            background: #000000;
+            background:rgba(0, 0, 0, 0.7);
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);

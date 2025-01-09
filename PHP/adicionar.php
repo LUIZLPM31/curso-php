@@ -16,11 +16,11 @@ include_once 'includes/head.php';
                     <label for="sobrenome"><strong>Sobrenome</strong></label>
                 </div>
                 <div class="input-field col s12">
-                    <input type="text" name="email" id="email">
+                    <input type="email" name="email" id="email">
                     <label for="email"><strong>Email</strong></label>
                 </div>
                 <div class="input-field col s12">
-                    <input type="text" name="idade" id="idade">
+                    <input type="number" name="idade" id="idade" min=1 max=120>
                     <label for="idade"><strong>Idade</strong></label>
                 </div>
                <button type="submit" name="btn-cadastrar" class="btn">Cadastrar</button>
@@ -36,7 +36,7 @@ include_once 'includes/head.php';
             
         }
         body {
-            background-color: #333133;
+            background-color: #129;
         }
         .row {
             margin-top: 20px;

@@ -72,7 +72,7 @@ include_once 'includes/head.php';
             
         }
         body {
-            background-color: #333133;
+            background-color: #129;
         }
         .row {
             margin-top: 20px;

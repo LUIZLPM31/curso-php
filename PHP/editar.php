@@ -36,7 +36,7 @@ endif;
     </div>
      <style>
         body {
-            background-color: #333133;
+            background-color: #129;
         }
         h3 {
             color: #fff;
