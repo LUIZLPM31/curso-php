@@ -66,13 +66,21 @@ include_once 'includes/head.php';
      </div>
     </div>
     <style>
+        form {
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: inset 0 0 10px #fff; 
+            background-color:rgb(243, 243, 242 , 0.1); ;
+        }
         h3 {
             color: #fff;
+            box-shadow: inset 0 0 10px #000000;
             
             
         }
         body {
-            background-color: #129;
+            background-image: url("https://wallpapers.com/images/hd/ufo-pictures-1re5vol0pb5pmfch.webp");
+            background-size: cover;
         }
         .row {
             margin-top: 20px;

@@ -39,7 +39,7 @@
           <span class="star" data-value="5">★</span>
         </div>
         <p>Decidido a reiniciar sua matança, Freddy Krueger ressuscita Jason Voorhees e o utiliza para recuperar seus poderes</p>
-        <button class="favorite-btn">Favoritar</button>
+       
       </div>
 
       <!-- Card de Filme 2 -->
@@ -54,7 +54,7 @@
           <span class="star" data-value="5">★</span>
         </div>
         <p>Um acidente desconhecido ocorre na Aqua-Line da Baía de Tóquio e um gabinete de emergência se reúne. De repente, uma criatura gigante aparece imediatamente, destruindo cidade atrás de cidade - e com rumo em direção à Tóquio.</p>
-        <button class="favorite-btn">Favoritar</button>
+       
       </div>
 
       <!-- Card de Filme 3 -->
@@ -69,7 +69,7 @@
           <span class="star" data-value="5">★</span>
         </div>
         <p>O adolescente Marty McFly é transportado para 1955 quando uma experiência do excêntrico cientista Doc Brown dá errado. Ele viaja pelo tempo em um carro modificado e acaba conhecendo seus pais ainda jovens. O problema é que Marty pode deixar de existir porque ele interferiu na rotina dos pais, que correm o risco de não se apaixonar mais. Para complicar ainda mais a situação, Marty precisa voltar para casa a tempo de salvar o cientista.</p>
-        <button class="favorite-btn">Favoritar</button>
+        
       </div>
 
       <!-- Card de Filme 4 -->
@@ -84,7 +84,7 @@
           <span class="star" data-value="5">★</span>
         </div>
         <p>No sul dos Estados Unidos, o ex-escravo Django faz uma aliança inesperada com o caçador de recompensas Schultz para perseguir os criminosos mais procurados do país e resgatar sua esposa de um fazendeiro que força seus escravos a entrarem em competições mortais.</p>
-        <button class="favorite-btn">Favoritar</button>
+       
       </div>
 
       <!-- Card de Filme 5 -->
@@ -100,7 +100,7 @@
         </div>
         <p>Até o surgimento de Steve Jobs e Bill Gates, a informática era algo distante, que não fazia parte do universo das pessoas comuns. Os dois, ainda estudantes, lideraram uma revolução que integrou os computadores ao nosso dia a dia.
         </p>
-        <button class="favorite-btn">Favoritar</button>
+        
       </div>
 
       <!-- Card de Filme 6 -->
@@ -116,7 +116,7 @@
         </div>
         <p>No início da década de 1970, o Brasil enfrenta o endurecimento da ditadura militar. No Rio de Janeiro, a família Paiva - Rubens, Eunice e seus cinco filhos - vive à beira da praia em uma casa de portas abertas para os amigos. Um dia, Rubens Paiva é levado por militares à paisana e desaparece.
         </p>
-        <button class="favorite-btn">Favoritar</button>
+        
       </div>
 
       <!-- Card de Filme 7 -->
@@ -132,7 +132,7 @@
         </div>
         <p>O coveiro Zé do Caixão tem a obsessão de gerar um filho perfeito. Ao saber que sua esposa não pode engravidar, ele procura a namorada de seu amigo e a violenta. Com isso, ela pretende se suicidar para voltar do mundo dos mortos e levar a alma dele.
         </p>
-        <button class="favorite-btn">Favoritar</button>
+        
       </div>
 
       <!-- Card de Filme 8 -->
@@ -148,7 +148,7 @@
         </div>
         <p>Com o objetivo de manipular Gotham City, um milionário tenta transformar o Pinguim, um ser deformado que tinha sido abandonado ainda bebê nos esgotos, em prefeito da cidade. Como se isto não bastasse, surge a Mulher-Gato que, apesar de ser linda e sedutora, também tem dupla personalidade, em razão de problemas no passado. Ambos se tornam verdadeiros pesadelos para Batman no presente.
         </p>
-        <button class="favorite-btn">Favoritar</button>
+       
       </div>
 
 

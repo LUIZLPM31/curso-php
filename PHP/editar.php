@@ -31,15 +31,25 @@ endif;
                     <label for="idade">Idade</label>
                 </div>
                 <button type="submit" name="btn-editar" class="btn">Atualizar</button>
-                <a href="index.php" class="btn green">Lista de clientes</a>   
+                <a href="index.php" class="btn green">Lista de clientes</a> 
+              </form>  
      </div>
     </div>
      <style>
+        form {
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: inset 0 0 10px #fff; 
+            background-color:rgb(243, 243, 242 , 0.1); ;
+        }
         body {
-            background-color: #129;
+            background-image: url("https://wallpapers.com/images/hd/ufo-pictures-1re5vol0pb5pmfch.webp");
+            background-size: cover;
         }
         h3 {
             color: #fff;
+            text-shadow: #ca1b1b;
+            box-shadow: inset 0 0 10px #000000;
         }
         .btn {
             background-color: #ca1b1b;
