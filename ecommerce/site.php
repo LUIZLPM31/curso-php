@@ -510,7 +510,7 @@ $app->post("/profile", function(){
 
 	if ($_POST['desemail'] !== $user->getdesemail()) {
 
-		if (User::checkLoginExists($_POST['desemail']) === true) {
+		if (User::checkLoginExist($_POST['desemail']) === true) {
 
 			User::setError("Este endereço de e-mail já está cadastrado.");
 			header('Location: /profile');

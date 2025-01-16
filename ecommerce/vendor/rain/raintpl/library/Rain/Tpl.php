@@ -178,27 +178,37 @@ class Tpl {
         return static::$plugins;
     }
 
-    protected function checkTemplate($template) {
-        // set filename
+    protected function shouldCompileTemplate($parsedTemplateFilepath, $templateFilepath) {
+        return static::$conf['debug'] || !file_exists($parsedTemplateFilepath) || filemtime($templateFilepath) > filemtime($parsedTemplateFilepath);
+    }
+
+    protected function checkTemplate(string $template): string 
+    {
         $templateName = basename($template);
-        $templateBasedir = strpos($template, DIRECTORY_SEPARATOR) ? dirname($template) . DIRECTORY_SEPARATOR : null;
+        $templateBasedir = strpos($template, DIRECTORY_SEPARATOR) 
+            ? dirname($template) . DIRECTORY_SEPARATOR 
+            : null;
+        
         $templateDirectory = static::$conf['tpl_dir'] . $templateBasedir;
         $templateFilepath = $templateDirectory . $templateName . '.' . static::$conf['tpl_ext'];
-        $parsedTemplateFilepath = static::$conf['cache_dir'] . $templateName . "." . md5($templateDirectory . serialize(static::$conf['checksum'])) . '.rtpl.php';
-
-        // if the template doesn't exsist throw an error
+        
         if (!file_exists($templateFilepath)) {
-            $e = new Tpl\NotFoundException('Template ' . $templateName . ' not found!');
-            throw $e->templateFile($templateFilepath);
+            throw (new Tpl\NotFoundException('Template ' . $templateName . ' not found!'))
+                ->templateFile($templateFilepath);
         }
-
-        // Compile the template if the original has been updated
-        if (static::$conf['debug'] || !file_exists($parsedTemplateFilepath) || ( filemtime($parsedTemplateFilepath) < filemtime($templateFilepath) ))
+        
+        $parsedTemplateFilepath = $this->getParsedTemplateFilepath($templateName, $templateDirectory);
+        
+        if ($this->shouldCompileTemplate($parsedTemplateFilepath, $templateFilepath)) {
             $this->compileFile($templateName, $templateBasedir, $templateDirectory, $templateFilepath, $parsedTemplateFilepath);
-
+        }
+        
         return $parsedTemplateFilepath;
     }
 
+    protected function getParsedTemplateFilepath($templateName, $templateDirectory) {
+        return static::$conf['cache_dir'] . $templateDirectory . $templateName . '.rtpl.php';
+    }
     /**
      * Check if a string has been already compiled
      * @param type $string
@@ -604,10 +614,10 @@ class Tpl {
         }
 
         // Execute plugins, after_parse
-        $context->code = $parsedCode;
+        $context->setCode($parsedCode);
         $this->getPlugins()->run('afterParse', $context);
 
-        return $context->code;
+        return $context->getCode();
     }
 
     protected function varReplace($html, $loopLevel = NULL, $escape = TRUE, $echo = FALSE) {
